@@ -57,7 +57,7 @@ function render() {
 
 function startGame() {
   board.map((row) =>
-    row.map((cell, cellIdx, cellArr) => (cellArr[cellIdx] = 0))
+    row.map((cell, cellIdx, cellArr) => (cellArr[cellIdx] = 0)),
   );
 
   render();
@@ -83,7 +83,7 @@ function startGame() {
 function setScore() {
   return board.reduce(
     (prev, row) => prev + row.reduce((sum, cell) => sum + cell),
-    0
+    0,
   );
 }
 
